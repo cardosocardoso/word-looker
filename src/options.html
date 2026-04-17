@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Word Looker · Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Word Looker</h1>
+      <div class="ver" id="version"></div>
+    </header>
+
+    <section class="intro">
+      <p>
+        Words and phrases you add here are detected inside PDFs when the overlay is on.
+        The list syncs across your signed-in Chrome browsers and is stored only in your browser —
+        nothing leaves your machine except Chrome's own sync.
+      </p>
+      <p class="mini">
+        Drag rows to change priority — top row shows first in the overlay panel.
+        Matching is always case-insensitive. Enable <em>whole word</em> for short terms or
+        acronyms (e.g. <code>AHP</code>) so they don't match inside unrelated words.
+        <em>Heading boost</em> makes matches inside bold / large headings surface first when iterating.
+      </p>
+    </section>
+
+    <section class="list-section">
+      <h2>Keywords</h2>
+      <div class="list-head">
+        <span class="col-drag"></span>
+        <span class="col-term">Term</span>
+        <span class="col-flag">Whole word</span>
+        <span class="col-flag">Heading boost</span>
+        <span class="col-actions"></span>
+      </div>
+      <ul id="list" class="list"></ul>
+      <button class="add" id="addBtn">+ Add entry</button>
+      <div class="save-status" id="saveStatus"></div>
+    </section>
+
+    <section class="updater-section">
+      <h2>Updates</h2>
+      <p class="mini">
+        The extension checks GitHub every 6 hours for a new release.
+        For one-click auto-update, set your local repo path below — it must match
+        where you cloned <code>word-looker</code> on this machine.
+      </p>
+      <label class="repo-path">
+        <span>Local repo path</span>
+        <input type="text" id="repoPath" placeholder="/Users/you/projetos/word-looker" spellcheck="false" />
+      </label>
+      <p class="mini">
+        You also need to install the native messaging host (one-time):
+      </p>
+      <pre class="code" id="installCmd"></pre>
+      <p class="mini">
+        If the native host isn't installed or the path is wrong, the popup's
+        <em>Install update</em> button will fall back to printing a manual <code>git pull</code>
+        command you can copy.
+      </p>
+    </section>
+  </main>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

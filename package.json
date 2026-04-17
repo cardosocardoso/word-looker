@@ -1,0 +1,25 @@
+{
+  "name": "word-looker",
+  "version": "0.1.0",
+  "description": "Chrome extension: find recurring words or phrases inside PDFs with a floating counter panel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cardosocardoso/word-looker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/cardosocardoso/word-looker/issues"
+  },
+  "homepage": "https://github.com/cardosocardoso/word-looker#readme",
+  "private": "true",
+  "dependencies": {
+    "pdfjs-dist": "^4.10.38"
+  }
+}

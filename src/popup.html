@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Word Looker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="hdr">
+    <div class="title">Word Looker</div>
+    <div class="ver" id="version"></div>
+  </header>
+
+  <section class="toggle-row">
+    <label class="switch">
+      <input type="checkbox" id="toggle" />
+      <span class="slider"></span>
+    </label>
+    <div class="toggle-text">
+      <div class="toggle-label">PDF overlay</div>
+      <div class="toggle-sub" id="toggleSub">Off</div>
+    </div>
+  </section>
+
+  <section class="hint" id="emptyHint" hidden>
+    Add some words first — open <button class="inline-link" id="openOptionsHint">Settings</button>.
+  </section>
+
+  <section class="update-card" id="updateCard" hidden>
+    <div class="update-title">Update available</div>
+    <div class="update-sub" id="updateVersions"></div>
+    <div class="update-actions">
+      <button class="primary" id="applyUpdateBtn">Install update</button>
+      <button class="secondary" id="openReleaseBtn">Release notes</button>
+    </div>
+    <div class="update-status" id="updateStatus" hidden></div>
+  </section>
+
+  <footer class="ft">
+    <button class="ft-btn" id="openOptions">Edit words…</button>
+    <button class="ft-btn" id="checkUpdate">Check for updates</button>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
