@@ -1,6 +1,6 @@
 {
   "name": "word-looker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Chrome extension: find recurring words or phrases inside PDFs with a floating counter panel.",
   "main": "index.js",
   "scripts": {

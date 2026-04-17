@@ -14575,6 +14575,9 @@ initCom(PDFViewerApplication);
       if (HOSTED_VIEWER_ORIGINS.includes(viewerOrigin)) {
         return;
       }
+      if (viewerOrigin.startsWith("chrome-extension://") || viewerOrigin.startsWith("moz-extension://")) {
+        return;
+      }
       const fileOrigin = new URL(file, window.location.href).origin;
       if (fileOrigin !== viewerOrigin) {
         throw new Error("file origin does not match viewer's");
